@@ -13,9 +13,6 @@
     <None Include="$(MSBuildThisFileDirectory)NuGet\CreatePackage.bat" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)NuGet\Icon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Office365.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)RequestResponseTypes.cs" />
   </ItemGroup>
