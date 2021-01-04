@@ -24,9 +24,9 @@ A Zebble plugin that allow you to sign in with Microsoft Office 365 API and acce
 #### Register your application
 
 You can register the application by visiting https://apps.dev.microsoft.com and clicking on the Add an app button. Once you enter the app details, be sure to note the Application Id generated. Under the Add Platforms section, you can now register an application to multiple platforms. This makes life simpler by having one application ID for various implementations of the same app across mobile and web.
-Click **Native Application**. This will allow mobile applications to access the organization’s AD and Graph API.
+Click **Native Application**. This will allow mobile applications to access the organizationâ€™s AD and Graph API.
 
-Once supported platforms are added, we can add permissions on the same screen. In this case, I’ve given the permissions `User.Read`. These are required to get a user’s information.
+Once supported platforms are added, we can add permissions on the same screen. In this case, Iâ€™ve given the permissions `User.Read`. These are required to get a userâ€™s information.
 Save the changes, and your app is now registered.
 
 ### Api Usage
@@ -96,6 +96,6 @@ To configure URL Schemes of IOS platform open the `Info.plist` file and add an U
 | :----------- | :----------- | :-----------                        | :------ | :-- | :------ |
 | Initialize         | Task| clientId -> string,<br> scopes -> string[],<br> redirectURI -> string| x       | x   | x       |
 | SignIn         | Task| -| x       | x   | x       |
-| SignOut         | void| -| x       | x   | x       |
-| GetRequest         | Task| url -> string,<br> requestResponse -> RequestResponseTypes| x       | x   | x       |
-| PostRequest         | Task| url -> string,<br> body -> string ,<br>requestResponse -> RequestResponseTypes| x       | x   | x       |
+| SignOut         | Task| -| x       | x   | x       |
+| GetRequest         | Task| url -> string| x       | x   | x       |
+| PostRequest         | Task| url -> string,<br> body -> string| x       | x   | x       |
