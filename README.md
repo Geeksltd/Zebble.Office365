@@ -97,5 +97,8 @@ To configure URL Schemes of IOS platform open the `Info.plist` file and add an U
 | Initialize         | Task| clientId -> string,<br> scopes -> string[],<br> redirectURI -> string| x       | x   | x       |
 | SignIn         | Task| -| x       | x   | x       |
 | SignOut         | Task| -| x       | x   | x       |
-| GetRequest         | Task| url -> string| x       | x   | x       |
-| PostRequest         | Task| url -> string,<br> body -> string| x       | x   | x       |
+| GetRequest&lt;T&gt;*         | Task<T>| url -> string| x       | x   | x       |
+| PostRequest&lt;T&gt;*         | Task<T>| url -> string,<br> body -> string| x       | x   | x       |
+    
+#### Note
+*: T can be string, byte[] or System.IO.Stream
