@@ -85,16 +85,14 @@ To configure URL Schemes of IOS platform open the `Info.plist` file and add an U
 ### Properties
 | Property     | Type         | Android | iOS | Windows |
 | :----------- | :----------- | :------ | :-- | :------ |
-| UIParent            | UIParent           | x       |    |        |
-| UserEmail            | string           | x       |  x  |    x    |
-| UserName            | string           | x       |  x  |    x    |
 | ClientId            | string           | x       |  x  |    x    |
-| Scopes            | string           | x       |  x  |    x    |
+| Scopes            | string[]           | x       |  x  |    x    |
+| UserName            | string           | x       |  x  |    x    |
 
 ### Methods
 | Method       | Return Type  | Parameters                          | Android | iOS | Windows |
 | :----------- | :----------- | :-----------                        | :------ | :-- | :------ |
-| Initialize         | Task| clientId -> string,<br> scopes -> string[],<br> redirectURI -> string| x       | x   | x       |
+| Initialize         | Task| clientId -> string,<br> scopes -> string[],<br> redirectUri -> string| x       | x   | x       |
 | SignIn         | Task| -| x       | x   | x       |
 | SignOut         | Task| -| x       | x   | x       |
 | GetRequest&lt;T&gt;*         | Task&lt;T&gt;| url -> string| x       | x   | x       |
