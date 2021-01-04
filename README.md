@@ -1,4 +1,4 @@
-[logo]: https://raw.githubusercontent.com/Geeksltd/Zebble.Office365/master/Shared/Icon.png "Zebble.Office365"
+[logo]: https://raw.githubusercontent.com/Geeksltd/Zebble.Office365/master/icon.png "Zebble.Office365"
 
 
 ## Zebble.Office365
@@ -44,7 +44,7 @@ To access user information or reading the contact list or calendar and so on, yo
 
 ```csharp
 //get user profile picture
-var stream = await Office365.GetRequest("https://graph.microsoft.com/v1.0/me/photo/$value", RequestResponseTypes.Stream);
+var stream = await Office365.GetRequest<Stream>("https://graph.microsoft.com/v1.0/me/photo/$value");
 ```
 
 #### PostRequest
@@ -52,7 +52,7 @@ var stream = await Office365.GetRequest("https://graph.microsoft.com/v1.0/me/pho
 You can use some other API methods which are need post type request like sending an Email like below:
 
 ```csharp
-var jsonString = await Office365.PostRequest("url", "body as json string", RequestResponseTypes.String);
+var jsonString = await Office365.PostRequest<string>("url", "body as json string");
 ```
 
 To see other Microsoft API you can see https://developer.microsoft.com/en-us/graph/docs/concepts/use_the_api
