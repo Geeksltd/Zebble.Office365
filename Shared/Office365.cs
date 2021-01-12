@@ -22,7 +22,7 @@
         {
             if (clientId.IsEmpty())
             {
-                Log.For<Office365>().Error(null, "Please provide the ClientId!");
+                Log.For<Office365>().Error("Please provide the ClientId!");
                 return;
             }
 
