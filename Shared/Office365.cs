@@ -22,7 +22,7 @@
         {
             if (clientId.IsEmpty())
             {
-                Device.Log.Error("Please provide the ClientId!");
+                Log.For<Office365>().Error(null, "Please provide the ClientId!");
                 return;
             }
 
@@ -81,7 +81,7 @@
             }
             catch (Exception e)
             {
-                Device.Log.Error(e.Message);
+                Log.For<Office365>().Error(e);
             }
 
             return default;
@@ -101,7 +101,7 @@
             }
             catch (Exception e)
             {
-                Device.Log.Error(e.Message);
+                Log.For<Office365>().Error(e);
             }
 
             return default;
